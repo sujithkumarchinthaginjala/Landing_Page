@@ -1,0 +1,76 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  @mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @mixin flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @mixin align-start {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
+  @mixin h($font-size:$headline1-size, $color:$text-gray, $align: center) {
+        font-family: $primary-font;
+        font-size: $font-size;
+        color: $color;
+        text-align: $align;
+        margin: 0;
+  }
+
+  @mixin p($font-size:$body1-size, $color:$text-gray, $align: center) {
+        font-family: $primary-font;
+        font-size: $font-size;
+        color: $color;
+        text-align: $align;
+        margin: 0;
+  }
+
+/* Button Mixins */
+
+@mixin apply-button($button-map) {
+  @each $prop, $value in $button-map {
+    #{$prop}: #{$value};
+  }
+}
+
+@mixin button-hover($hover-bg: $primary-dark, $hover-color: #fff, $underline: false) {
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-bg;
+    color: $hover-color;
+    @if $underline {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Div Structure Mixin */
+/* This mixin is used to create a flex container with specific properties. */
+
+@mixin structure($display: flex, $justify-content: center, $align-items: center, $flex-direction: column) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+}
+  

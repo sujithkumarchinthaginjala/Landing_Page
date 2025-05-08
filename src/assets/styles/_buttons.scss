@@ -1,0 +1,118 @@
+/* Primary buttons */
+/* Normal Icons */
+$primary-Normal : (
+    width: 111px,
+    height: 56px,
+    color: $white,
+    background-color: $primary,
+    justify-content: center,
+    align-items: center,
+    display: flex,
+    border: none,
+    border-radius: 6px,
+    font-size: $body1-size,
+    font-weight: 400,
+    gap: 10px,
+    cursor: pointer,
+);
+
+$primary-NormalIcon : (
+    width: 143px,
+    height: 56px,
+    color: $white,
+    background-color: $primary,
+    justify-content: center,
+    align-items: center,
+    display: flex,
+    border: none,
+    border-radius: 6px,
+    font-size: $body1-size,
+    font-weight: 400,
+    gap: 10px,
+    cursor: pointer,
+);
+
+/* Medium Icons */
+
+$primary-Medium : (
+    height: 48px,
+    padding: 10px 30px,
+    color: $white,
+    background-color: $primary,
+    justify-content: center,
+    align-items: center,
+    display: flex,
+    border: none,
+    border-radius: 6px,
+    font-size: $body2-size,
+    font-weight: 400,
+    gap: 10px,
+    cursor: pointer,
+);
+
+$primary-MediumIcon : (
+    padding: 10px 30px,
+    height: 48px,
+    color: $white,
+    background-color: $primary,
+    justify-content: center,
+    align-items: center,
+    display: flex,
+    border: none,
+    border-radius: 6px,
+    font-size: $body2-size,
+    font-weight: 400,
+    gap: 10px,
+    cursor: pointer,
+);
+
+
+/*  Medium Icons without background */
+
+$primary-MediumIcon_no_bg : (
+    padding: 10px 30px,
+    height: 48px,
+    color: $primary,
+    background-color: $silver,
+    justify-content: center,
+    align-items: center,
+    display: flex,
+    border: none,
+    border-radius: 6px,
+    font-size: $body2-size,
+    font-weight: 400,
+    gap: 10px,
+    cursor: pointer,
+);
+
+$primary-small: (
+    height: 40px,
+    padding: 10px 20px,
+    color: $white,
+    background-color: $primary,
+    justify-content: center,
+    align-items: center,
+    display: flex,
+    border: none,
+    border-radius: 6px,
+    font-size: $body2-size,
+    font-weight: 400,
+    gap: 10px,
+    cursor: pointer,
+);
+
+$primary-small_no_bg : (
+    padding: 10px 20px,
+    height: 40px,
+    color: $primary,
+    background-color: $silver,
+    justify-content: center,
+    align-items: center,
+    display: flex,
+    border: none,
+    border-radius: 6px,
+    font-size: $body2-size,
+    font-weight: 400,
+    gap: 10px,
+    cursor: pointer,
+);
