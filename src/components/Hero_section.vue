@@ -23,12 +23,7 @@ import illustration from '../components/icons/Illustration.png';
 </template>
 
 <style scoped lang="scss">
-
-@import '../assets/styles/font';
-@import '../assets/styles/typography';
-@import '../assets/styles/colors';
-@import '../assets/styles/mixins';
-@import '../assets/styles/buttons';
+    @import '../assets/styles/main.scss';
 
 .insight_container {
         display: flex;
