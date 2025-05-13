@@ -1,6 +1,2 @@
-@import '../styles/font';
-@import '../styles/typography';
-@import '../styles/colors';
-@import '../styles/mixins';
-@import '../styles/buttons';
+@use '../styles/Abstracts/index.scss' as *;
 

@@ -1,13 +1,13 @@
 <script setup>
     import NavBar from '../components/Nav.vue';
-    import frame from '../components/icons/Frame35.png';
-    import pana from '../components/icons/pana.png';
+    import frame from '../assets/icons/Frame35.png';
+    import pana from '../assets/icons/pana.png';
     import Footer from '../components/Footer.vue';
-    import Hero_section from '@/components/Hero_section.vue';
-    import clientsCommunity_section from '@/components/clients&community_section.vue';
-    import insight_section from '@/components/insight_section.vue';
-    import mid_section from '@/components/mid_section.vue';
-    import customer_section from '@/components/customer_section.vue';
+    import Hero_section from '@/components/HeroSection.vue';
+    import clientsCommunity_section from '@/components/ClientsCommunitySection.vue';
+    import insight_section from '@/components/InsightSection.vue';
+    import mid_section from '@/components/MidSection.vue';
+    import customer_section from '@/components/CustomerSection.vue';
 </script>
 
 <template>
@@ -39,11 +39,7 @@
 </template>
 
 <style lang="scss" scoped>
-    @import '../assets/styles/font';
-    @import '../assets/styles/typography';
-    @import '../assets/styles/colors';
-    @import '../assets/styles/mixins';
-    @import '../assets/styles/buttons';
+    @use '../assets/styles/Abstracts/index.scss' as *;
 
     .landing-page {
         @include flex-center;

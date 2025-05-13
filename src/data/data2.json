@@ -2,21 +2,21 @@
     {
         "count": "2,245,341",
         "title": "Members",
-        "image": "src/components/icons/Img(1).png"
+        "image": "src/assets/icons/Img(1).png"
     },
     {
         "count": "46,328",
         "title": "clubs",
-        "image": "src/components/icons/Img(2).png"
+        "image": "src/assets/icons/Img(2).png"
     },
     {
         "count": "828,867",
         "title": "Event Bookings",
-        "image": "src/components/icons/Img(3).png"
+        "image": "src/assets/icons/Img(3).png"
     },
     {
         "count": "1,926,436",
         "title": "payments",
-        "image": "src/components/icons/Img(4).png"
+        "image": "src/assets/icons/Img(4).png"
     }
 ]

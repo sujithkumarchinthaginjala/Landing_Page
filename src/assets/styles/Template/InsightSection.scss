@@ -1,0 +1,35 @@
+@use '../Abstracts/index.scss' as *;
+
+.cont-insight {
+        @include flex-around;
+        flex-direction: row;
+        width: 90%;
+        height: 599px;
+
+    }
+
+    .insight-text1{
+        flex-direction: column;
+        width: 600px;
+
+        h1{
+            color: $d-grey;
+            font-family: $primary-font;
+            font-size: $headline2-size;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        p{
+            font-family: $primary-font;
+            font-size: $body3-size;
+            font-weight: 400;
+            color: $grey;
+        }
+
+        .primary-button {
+            @include apply-button($primary-Medium);
+            margin-top: 40px;
+            @include button-hover;
+    }
+    }
