@@ -9,8 +9,32 @@
         gap: 70px;
         padding-top: 10px;
 
+        @include respond-to(mobile){
+            width: 100%;
+            flex-direction: column;
+            height: auto;
+            gap: 20px;
+        }
+
+        @include respond-to(tablet){
+            width: 100%;
+            flex-direction: row;
+            height: auto;
+            gap: 20px;
+        }
+
         img{
             height: 92%;
+
+            @include respond-to(mobile){
+                width: 80%;
+                height: 90%;
+            }
+
+            @include respond-to(tablet){
+                width: 70%;
+                height: 80%;
+            }
         }
 
         .customers-text {
@@ -18,12 +42,32 @@
             width: 700px;
             gap: 20px;
 
+            @include respond-to(mobile){
+                width: 100%;
+                padding: 10px;
+                align-items: center;
+            }
+
             p {
                 font-family: $primary-font;
                 font-size: $body2-size;
                 font-weight: 500;
                 color: $grey;
                 margin: 0;
+
+                @include respond-to(mobile){
+                    width: 90%;
+                    font-size: $body4-size;
+                    font-weight: 400;
+                    text-align: justify;
+                }
+
+                @include respond-to(tablet){
+                    width: 95%;
+                    font-size: $body3-size;
+                    font-weight: 400;
+                    text-align: justify;
+                }
             }
 
             h6 {
@@ -32,6 +76,10 @@
                 font-weight: 600;
                 color: $primary;
                 margin: 0;
+
+                @include respond-to(tablet){
+                    font-size: $headline5-size;
+                }
             }
 
             span {
@@ -39,17 +87,48 @@
                 font-size: $body3-size;
                 font-weight: 400;
                 color: $grey; 
+
+                @include respond-to(tablet){
+                    font-size: $body4-size;
+                }
             }
 
             .customers-logo {
                 @include flex-between;
                 flex-direction: row;
                 width: 100%;
-                // margin-top: 20px;
+
+                @include respond-to(mobile){
+                    width: 100%;
+                    @include flex-around;
+
+                    img{
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                @include respond-to(tablet){
+                    width: 93%;
+                    @include flex-between;
+
+                    img{
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
 
                 .no_bg-button {
                     @include apply-button($primary-MediumIcon_no_bg);
                     @include button-hover($primary, $white);
+
+                    @include respond-to(mobile){
+                        display: none;
+                    }
+
+                     @include respond-to(tablet){
+                        display: none;
+                    }
                 }
             }
         }
@@ -63,6 +142,14 @@
         background-color: $white;
         gap: 30px;
 
+        @include respond-to(mobile){
+            height: auto;
+        }
+
+        @include respond-to(tablet){
+            height: auto;
+        }
+
         .last-section-text {
             @include flex-center;
             flex-direction: column;
@@ -70,12 +157,30 @@
             text-align: center;
             gap: 20px;
 
+            @include respond-to(mobile){
+                    width: 90%;
+                    text-align: justify;
+                }
+
+            @include respond-to(tablet){
+                    width: 70%;
+                    text-align: justify;
+                }
+
             h1 {
                 font-family: $primary-font;
                 font-size: $headline2-size;
                 font-weight: 600;
                 color: $d-grey;
                 margin: 0;
+
+                @include respond-to(mobile){
+                    font-size: $headline4-size;
+                }
+
+                @include respond-to(tablet){
+                    font-size: $headline3-size;
+                }
             }
 
             p {
@@ -84,6 +189,14 @@
                 font-weight: 400;
                 color: $grey;
                 margin: 0;
+
+                @include respond-to(mobile){
+                    font-size: $body4-size;
+                }
+
+                @include respond-to(tablet){
+                    font-size: $body3-size;
+                }
             }
         }
         .cards_container {
@@ -92,17 +205,46 @@
             justify-content: space-around;
             flex-direction: row;
             width: 85%;
-            height: 400px;
+            height: auto;
+
+            @include respond-to(mobile){
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            @include respond-to(tablet){
+                width: 100%;
+                gap: 20px;
+            }
 
             .cards{
                 @include flex-around;
                 flex-direction: column;
                 position: relative;
                 height: 90%;
+                
+                @include respond-to(mobile){
+                    height: 300px;
+                }
             }
 
             img{
-                width: 348px
+                width: 348px;
+                @include respond-to(mobile){
+                    width: 258px;
+                    position: relative;
+                }
+
+                @include respond-to(tablet){
+                    width: 208px;
+                    position: relative;
+                }
+
+                @include respond-to(laptop){
+                    width: 258px;
+                    position: relative;
+                }
             };
 
             .mini-card{ 
@@ -119,16 +261,46 @@
                 z-index: 2;
                 padding: 10px;
 
+                @include respond-to(mobile){
+                    width: 188px;
+                    min-height: 130px;
+                }
+
+                @include respond-to(tablet){
+                    width: 158px;
+                    min-height: 130px;
+                }
+
+                @include respond-to(laptop){
+                    width: 178px;
+                    min-height: 130px;
+                }
+
                 p {
                 font-family: $primary-font;
                 font-size: $headline4-size;
                 font-weight: 600;
                 color: $grey;
+
+                @include respond-to(mobile){
+                    font-size: $body2-size;
+                    font-weight: 300;
+                }
+                @include respond-to(tablet){
+                    font-size: $body4-size;
+                    font-weight: 300;
+                }
+
+                @include respond-to(laptop){
+                    font-size: $body2-size;
+                    font-weight: 300;
+                }
                 }
 
                 .no_bg-button {
                     @include apply-button($primary-MediumIcon_no_bg);
                     @include button-hover($primary, $white);
+                    font-size: 12px;
                 }
             }
 

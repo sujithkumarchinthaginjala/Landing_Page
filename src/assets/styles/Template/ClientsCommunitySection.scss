@@ -18,6 +18,14 @@
                 font-weight: 600;
                 color: $d-grey;
                 margin: 0;
+
+                @include respond-to(mobile){
+                    font-size: $headline4-size;
+                }
+
+                @include respond-to(tablet){
+                    font-size: $headline3-size;
+                }
             }
 
             p {
@@ -25,6 +33,16 @@
                 font-size: $body2-size;
                 font-weight: 400;
                 color: $grey;
+
+                @include respond-to(mobile){
+                    font-size: $body4-size;
+                    font-weight: 300;
+                }
+
+                @include respond-to(tablet){
+                    font-size: $body3-size;
+                    font-weight: 300;
+                }
             }
         }
 
@@ -33,6 +51,26 @@
             width: 1152px;
             flex-direction: row;
             margin-top: 25px;
+
+            @include respond-to(mobile){
+                width: 100%;
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            @include respond-to(tablet){
+                width: 100%;
+                img{
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+
+            @include respond-to(laptop){
+                width: 100%;
+            }
         }
     }
 
@@ -41,6 +79,17 @@
         flex-direction: column;
         text-align: center;
         width: 100%;
+        @include respond-to(mobile){
+            margin-top:25px;
+        }
+
+        @include respond-to(tablet){
+            margin-top:25px;
+        }
+
+        @include respond-to(laptop){
+            margin-top:25px;
+        }
 
         h1{
             font-family: $primary-font;
@@ -48,6 +97,15 @@
             font-weight: 600;
             color: $d-grey;
             margin: 0;
+
+            @include respond-to(mobile){
+                font-size: $headline4-size;
+            }
+
+            @include respond-to(tablet){
+                font-size: $headline3-size;
+            }
+           
         }
 
         p{
@@ -55,14 +113,38 @@
             font-size: $body2-size;
             font-weight: 400;
             color: $grey;
+            
+            @include respond-to(mobile){
+                font-size: $body4-size;
+                font-weight: 300;
+            }
+
+            @include respond-to(tablet){
+                font-size: $body3-size;
+                font-weight: 400;
+            }
         }
     }
 
     .community_card {
         @include flex-around;
         flex-direction: row;
-        width: 90%;
+        width: 100%;
         background-color: $white;
+
+        @include respond-to(mobile){
+            @include flex-center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        @include respond-to(tablet){
+            width: 100%;
+        }
+
+        @include respond-to(laptop){
+            width: 100%;
+        }
     
     .communitydata {
         @include flex-around;
@@ -72,12 +154,33 @@
         background-color: $white;
         text-align: center;
 
+        @include respond-to(mobile){
+            @include flex-center;
+            height: 200px;
+        }
+
+        @include respond-to(tablet){
+            @include flex-center;
+            height: 200px;
+        }
+
         h1 {
             font-family: $primary-font;
             font-size: $headline3-size;
             font-weight: 700;
             color: $d-grey;
             margin: 0;
+
+            @include respond-to(mobile){
+                font-size: $headline4-size;
+                width: 150px;
+            }
+
+            @include respond-to(tablet){
+                font-size: $headline4-size;
+                width: 150px;
+                font-weight: 500;
+            }
         }
 
         p {
@@ -85,6 +188,17 @@
             font-size: $body3-size;
             font-weight: 400;
             color: $grey;
+
+            @include respond-to(mobile){
+                font-size: $body4-size;
+                font-weight: 300;
+            }
+
+            @include respond-to(tablet){
+                font-size: $body3-size;
+                font-weight: 300;
+                width: 190px;
+            }
         }
     }
 }

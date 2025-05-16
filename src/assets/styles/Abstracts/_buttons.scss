@@ -53,6 +53,39 @@ $primary-Medium : (
     cursor: pointer,
 );
 
+$primary-Medium-mobile : (
+    height: 35px,
+    padding: 10px 15px,
+    color: $white,
+    background-color: $primary,
+    justify-content: center,
+    align-items: center,
+    display: flex,
+    border: none,
+    border-radius: 6px,
+    font-size: $body3-size,
+    font-weight: 400,
+    gap: 10px,
+    cursor: pointer,
+);
+
+$primary-Medium-tablet : (
+    height: 42px,
+    padding: 10px 20px,
+    color: $white,
+    background-color: $primary,
+    justify-content: center,
+    align-items: center,
+    display: flex,
+    border: none,
+    border-radius: 6px,
+    font-size: $body3-size,
+    font-weight: 400,
+    gap: 10px,
+    cursor: pointer,
+);
+
+
 $primary-MediumIcon : (
     padding: 10px 30px,
     height: 48px,
@@ -64,6 +97,38 @@ $primary-MediumIcon : (
     border: none,
     border-radius: 6px,
     font-size: $body2-size,
+    font-weight: 400,
+    gap: 10px,
+    cursor: pointer,
+);
+
+$primary-MediumIcon-mobile : (
+    padding: 10px 15px,
+    height: 35px,
+    color: $white,
+    background-color: $primary,
+    justify-content: center,
+    align-items: center,
+    display: flex,
+    border: none,
+    border-radius: 6px,
+    font-size: $body3-size,
+    font-weight: 400,
+    gap: 10px,
+    cursor: pointer,
+);
+
+$primary-MediumIcon-tablet : (
+    padding: 10px 20px,
+    height: 42px,
+    color: $white,
+    background-color: $primary,
+    justify-content: center,
+    align-items: center,
+    display: flex,
+    border: none,
+    border-radius: 6px,
+    font-size: $body3-size,
     font-weight: 400,
     gap: 10px,
     cursor: pointer,

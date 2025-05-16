@@ -6,11 +6,44 @@
         width: 90%;
         height: 599px;
 
+        @include respond-to(mobile){
+            width: 100%;
+            flex-direction: column;
+            height: auto;
+            gap: 20px;
+
+            img{
+                width: 300px;
+                height: 330px;
+            }
+        }
+
+        @include respond-to(tablet){
+            width: 97%;
+            height: auto;
+            gap: 20px;
+
+            img{
+                width: 320px;
+                height: 300px;
+            }
+        }
+
     }
 
     .insight-text1{
         flex-direction: column;
         width: 600px;
+
+        @include respond-to(mobile){
+            width: 90%;
+            @include flex-center;
+        }
+
+        @include respond-to(tablet){
+            width: 55%;
+        }
+        
 
         h1{
             color: $d-grey;
@@ -18,6 +51,16 @@
             font-size: $headline2-size;
             font-weight: 600;
             margin: 0;
+
+            @include respond-to(mobile){
+                font-size: $headline4-size;
+                text-align: center;
+            }
+
+            @include respond-to(tablet){
+                font-size: $headline3-size;
+            }
+            
         }
 
         p{
@@ -25,11 +68,34 @@
             font-size: $body3-size;
             font-weight: 400;
             color: $grey;
+
+            @include respond-to(mobile){
+                font-size: $body4-size;
+                text-align: justify;
+            }
+
+            @include respond-to(tablet){
+                font-size: $body3-size;
+                text-align: justify;
+            }
         }
 
         .primary-button {
             @include apply-button($primary-Medium);
             margin-top: 40px;
             @include button-hover;
+
+            @include respond-to(mobile){
+              margin-top: 10px;  
+            @include respond-to(mobile){
+                @include apply-button($primary-MediumIcon-mobile);
+                @include button-hover;
+            }
+
+            @include respond-to(tablet){
+                @include apply-button($primary-MediumIcon-tablet);
+                @include button-hover;
+            }
+            }
     }
     }

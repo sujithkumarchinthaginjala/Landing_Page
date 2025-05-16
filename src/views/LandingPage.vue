@@ -39,27 +39,6 @@
 </template>
 
 <style lang="scss" scoped>
-    @use '../assets/styles/Abstracts/index.scss' as *;
-
-    .landing-page {
-        @include flex-center;
-        flex-direction: column;
-        width: 100%;
-        // height: 100vh;
-        background-color: $white;
-    }
-    .primary-button {
-        @include apply-button($primary-Medium);
-        margin-top: 40px
-    }
-
-    .intro {
-        @include flex-between;
-        flex-direction: column;
-        width: 100%;
-        height: 3535px;
-        background-color: $white;
-        gap: 40px;
-    }
+    @use '../assets/styles/Views/LandingPage.scss' as *;
    
 </style>

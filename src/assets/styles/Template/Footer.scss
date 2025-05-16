@@ -7,20 +7,74 @@
         height: 628px; 
         background-color: $silver;
 
+        @include respond-to(mobile){
+            width: 100%;
+            height: auto;
+            gap: 20px;
+        }
+
+        @include respond-to(tablet){
+            width: 100%;
+            height: auto;
+            gap:30px;
+        }
+
+        @include respond-to(laptop){
+            width: 100%;
+            height: auto;
+            gap:30px;
+        }
+
         .footer-content {
             @include flex-around;
             flex-direction: column;
             width: 50%;
             height: 300px;
             text-align: center;
+            
+            @include respond-to(mobile){
+                width: 100%;
+                height: auto;
+                gap: 20px;
+            }
+
+            @include respond-to(tablet){
+                width: 100%;
+                height: auto;
+                gap: 20px;
+            }
+
+            @include respond-to(laptop){
+                width: 100%;
+                height: auto;
+                gap: 20px;
+            }
 
             h1{
                 @include h($headline1-size);
+                
+                @include respond-to(mobile){
+                    font-size:$headline4-size;
+                }
+
+                @include respond-to(tablet){
+                    font-size:$headline2-size;
+                }
+
             }
 
             .primary-button {
                 @include apply-button($primary-MediumIcon);
                 @include button-hover;
+
+                @include respond-to(mobile){
+                    @include apply-button($primary-MediumIcon-mobile);
+                    @include button-hover;
+                }
+                @include respond-to(tablet){
+                    @include apply-button($primary-MediumIcon-tablet);
+                    @include button-hover;
+                }
             }
         }
     }
@@ -32,6 +86,14 @@
         height: 328px;
         background-color: $black;
 
+        @include respond-to(mobile){
+            height: auto;
+        }
+
+        @include respond-to(tablet){
+            height: auto;
+        }
+
         .footer-logo{
             display: flex;
             justify-content: space-between;
@@ -39,11 +101,46 @@
             flex-direction: column;
             width: 350px;
             height: 180.5px;
+            
+            @include respond-to(mobile){
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                .logo{
+                    height: 20px;
+                    width: 120px;
+                }
+            }
+
+            @include respond-to(tablet){
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                gap: 10px;
+
+                .logo{
+                    height: 20px;
+                    width: 120px;
+                }
+            }
+
+            @include respond-to(laptop){
+                margin-left: 20px;
+            }
 
             .footer-text{
                 flex-direction: column;
                 width: 100%;
                 text-align: start;
+
+                @include respond-to(mobile){
+                    text-align: center;
+                }
+
+                @include respond-to(tablet){
+                    text-align: center;
+                }
 
                 p{
                     font-family: $primary-font;
@@ -51,6 +148,10 @@
                     font-weight: 300;
                     color: $silver;
                     margin: 10px;
+
+                    @include respond-to(mobile){
+                        font-size: $body4-size;
+                    }
 
                 }
             }
@@ -70,6 +171,14 @@
             width: 635px;
             height: 200px;
 
+            @include respond-to(mobile){
+                    display: none;
+                }
+
+            @include respond-to(tablet){
+                    width: 50%;
+                }
+
             .list{
                 display: flex;
                 justify-content: space-between;
@@ -78,6 +187,10 @@
                 width: 160px;
                 height: 200px;
                 text-align: start;
+
+                @include respond-to(tablet){
+                    display: none;
+                }
 
                 h1{
                     @include h($headline4-size, $white);
@@ -101,6 +214,14 @@
                 flex-direction: column;
                 gap: 15px;
 
+                @include respond-to(tablet){
+                    width: 65%;
+                    justify-content: center;
+                    align-items: start;
+                    margin-top: 25px;
+                }
+
+
                 h1{
                     @include h($headline4-size, $white);
                     margin-bottom: 10px;
@@ -109,7 +230,10 @@
                      .send-input-wrapper {
                         position: relative;
                         width: 255px;
-                        // margin: auto;
+
+                        @include respond-to(laptop){
+                           width: 245px; 
+                        }
                         }
 
                         .send-input {
@@ -120,7 +244,12 @@
                             border-radius: 10px;
                             outline: none;
                             background-color: $d-grey;
-                            padding: 0px 10px
+                            padding: 0px 10px;
+
+                            @include respond-to(laptop){
+                                width: 225px; 
+                            }
+
                         }
 
                         .send-button {

@@ -10,14 +10,46 @@
         background-color: $silver;
         padding: 30px 0px;
         gap: 60px;
+
+        @include respond-to(mobile){
+            width: 100%;
+            padding: 20px 0px;
+            height: auto;
+        }
+
+        @include respond-to(tablet){
+            width: 100%;
+            padding: 40px 0px;
+            height: auto;
+        }
     }
 
     .insight {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        @include flex-around;
         flex-direction: row;
         width: 90%; 
+
+        @include respond-to(mobile){
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @include respond-to(tablet){
+            gap: 30px;
+        }
+
+        img{
+            @include respond-to(mobile){
+                width: 250px;
+                height: 240px;
+            }
+
+            @include respond-to(tablet){
+                width: 300px;
+                height: 280px;
+            }
+
+        }
     }
 
     .insight-text {
@@ -29,6 +61,14 @@
         font-size: $headline1-size;
         font-weight: 600;
         margin:0;
+
+        @include respond-to(mobile){
+            font-size: $headline3-size;
+        }
+
+        @include respond-to(tablet){
+            font-size: $headline2-size;
+        }
     }
         
     span {
@@ -42,6 +82,16 @@
         font-size: $body2-size;
         font-weight: 400;
         color: $grey;
+
+        @include respond-to(mobile){
+            font-size: $body4-size;
+            font-weight: 200;
+        }
+
+        @include respond-to(tablet){
+            font-size: $body3-size;
+            font-weight: 300;
+        }
         
         }
 
@@ -49,6 +99,16 @@
         @include apply-button($primary-Medium);
         margin-top: 30px;
         @include button-hover;
+
+        @include respond-to(mobile){
+            @include apply-button($primary-MediumIcon-mobile);
+            @include button-hover;
+        }
+
+        @include respond-to(tablet){
+            @include apply-button($primary-MediumIcon-tablet);
+            @include button-hover;
+        }
     }
     }
 
@@ -65,6 +125,16 @@
         border-radius: 50%;
         background-color: $grey; 
         opacity: 0.5;
+
+        @include respond-to(mobile){
+            width: 8px;
+            height: 8px;
+        }
+
+        @include respond-to(tablet){
+            width: 10px;
+            height: 10px;
+        }
 
         &.active {
         background-color: $primary; 

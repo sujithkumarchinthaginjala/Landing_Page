@@ -1,13 +1,30 @@
 @use '../Abstracts/index.scss' as *;
 
 .wrapper {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        @include flex-around;
         flex-direction: row;
         width: 100%;
         height: 84px; 
         background-color: $silver;
+        img{
+            padding-left: 15px;
+            width: 90px;
+            height: 15px;
+        }
+
+        @include respond-to(tablet) {
+            height: 65px;
+            @include flex-around;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        @include respond-to(mobile) {
+            height: 50px;
+            @include flex-between;
+            flex-direction: row;
+            width: 100%;
+        }
 
         & .nav-ele {
             display: flex;
@@ -21,6 +38,10 @@
                 gap: 50px;
                 list-style: none;
 
+                @include respond-to(laptop){
+                   gap: 30px;
+                }
+
                 a {
                     font-family: $primary-font;
                     font-size: $body2-size;
@@ -29,13 +50,32 @@
 
                     @include button-hover($hover-bg: none, $hover-color: $primary);
                 }
+
             }
+            @include respond-to(mobile) {
+                    display: none; 
+                }
+
+            @include respond-to(tablet) {
+                    display: none; 
+                }
         }
+
     }
 
     .logo {
         width: 155px;
         height: 24px;
+
+        @include respond-to(tablet) {
+            width: 100px;
+            height: 20px;
+        }
+
+        @include respond-to(mobile) {
+            width: 90px;
+            height: 18px;
+        }
     }
 
     .log_sign {
@@ -59,24 +99,116 @@
                 // margin-top: 40px;
                 @include button-hover($silver, $primary-dark, $underline:true);
             }
+
+            @include respond-to(tablet){
+            display: none;
+        }
+
         }
 
         .signup {
             width: auto;
             height: 40px;
-            // background-color: $primary;
             border-radius: 5px;
             display: flex;
             justify-content: center;
             align-items: center;
-            // padding: 10px 20px;
             cursor: pointer;
             
 
             .primary-button {
                 @include apply-button($primary-small);
-                // margin-top: 40px;
                 @include button-hover;
+
+                @include respond-to(mobile){
+                    @include apply-button($primary-MediumIcon-mobile);
+                    @include button-hover;
+                }
+
+                @include respond-to(tablet){
+                    @include apply-button($primary-MediumIcon-tablet);
+                    @include button-hover;
+                }
             }
+
+            @include respond-to(mobile){
+                display: none;
+            }
+
+            @include respond-to(tablet){
+                display: none;
+            }
+
+        }
+
+
+        @include respond-to(mobile){
+            display: none;
         }
     }
+
+    .menu-icon {
+        display: none;
+        width: 30px;
+        cursor: pointer;
+
+         @include respond-to(tablet) {
+            display: block;
+        }
+
+        @include respond-to(mobile) {
+            display: block;
+        }
+
+        .menu-logo{
+            @include respond-to(tablet){
+                font-size: 20px;
+            }
+        }
+
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        background-color: $white;
+        padding: 10px 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 100%;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        // transform: translateX(100%);
+        transition: transform 5s ease;
+        opacity: 0;
+        pointer-events: none;
+
+
+        &.open {
+            // transform: translateX(0);
+            opacity: 1;
+            pointer-events: auto;
+
+        }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 20px;
+
+        a {
+            font-family: $primary-font;
+            font-size: $body2-size;
+            color: $text-gray;
+            cursor: pointer;
+
+            @include button-hover($hover-bg: none,$hover-color: $primary);
+        }
+    }
+
+}
+    
