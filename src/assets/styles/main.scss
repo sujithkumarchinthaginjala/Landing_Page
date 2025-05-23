@@ -3,3 +3,11 @@
  html,body{
     overflow-x: hidden;
 }
+
+:root {
+  @include apply-theme(light); // default theme
+}
+
+[data-theme="dark"] {
+  @include apply-theme(dark);
+}

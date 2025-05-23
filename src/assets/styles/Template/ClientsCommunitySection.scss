@@ -4,7 +4,7 @@
         @include flex-between;
         flex-direction: column;
         width: 100%;
-        background-color: $white;
+        background-color: var(--background);
         text-align: center;
 
         .clients-text {
@@ -130,7 +130,7 @@
         @include flex-around;
         flex-direction: row;
         width: 100%;
-        background-color: $white;
+        background-color: var(--background);
 
         @include respond-to(mobile){
             @include flex-center;
@@ -151,7 +151,7 @@
         flex-direction: column;
         width: 229px;
         height: 260px;
-        background-color: $white;
+        background-color: var(--background);
         text-align: center;
 
         @include respond-to(mobile){

@@ -96,7 +96,6 @@
 
             .primary-button {
                 @include apply-button($primary-small_no_bg);
-                // margin-top: 40px;
                 @include button-hover($silver, $primary-dark, $underline:true);
             }
 
@@ -210,5 +209,82 @@
         }
     }
 
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+
+  @include respond-to(mobile){
+    width: 30px;
+    height: 16px;
+  }
+
+  @include respond-to(tablet){
+    width: 35px;
+    height: 18px;
+  }
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--primary);
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+
+  @include respond-to(mobile){
+    width: 11px;
+    height: 11px;
+    left: 3px;
+    bottom: 3px;
+  }
+
+  @include respond-to(tablet){
+    width: 14px;
+    height: 14px;
+    left: 3px;
+    bottom: 2px;
+  }
+}
+
+input:checked + .slider {
+  background-color: var(--primary);
+}
+
+input:checked + .slider::before {
+  transform: translateX(22px);
+
+    @include respond-to(mobile){
+        transform: translateX(14px);
+    }
+
+    @include respond-to(tablet){
+        transform: translateX(16px);
+    }
 }
     

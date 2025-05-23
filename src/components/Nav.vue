@@ -1,6 +1,12 @@
 <script setup>
     import logo from '@/assets/icons/Logo (1).png';
-    import { ref } from 'vue';
+    import { ref, onMounted } from 'vue'
+
+    const isDark = ref(false)
+
+    onMounted(() => {
+    isDark.value = document.documentElement.getAttribute('data-theme') === 'dark'
+    })
 
     const isMenuOpen = ref(false);
 
@@ -10,6 +16,14 @@
 
     function closeMenu() {
         isMenuOpen.value = false;
+    }
+
+    function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';     
+        html.setAttribute('data-theme', next);
+        console.log(`Switched to ${next} theme`);
     }
 </script>
 
@@ -34,6 +48,10 @@
                 <button class="primary-button">Sign up</button>
             </div>
         </div>
+        <label class="theme-switch">
+            <input type="checkbox" @change="toggleTheme" :checked="isDark" />
+            <span class="slider"></span>
+        </label>
 
         <div class="menu-icon" @click="toggleMenu"> 
             <font-awesome-icon :icon="['fas', 'bars']" style="color:#4CAF4F;" size="sm" class="menu-logo"/>

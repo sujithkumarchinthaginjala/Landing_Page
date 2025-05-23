@@ -1,4 +1,13 @@
 @use 'variables' as *;
+@use 'theme' as *;
+
+@mixin apply-theme($theme-name) {
+  $theme: map-get($themes, $theme-name);
+
+  --background: #{map-get($theme, background)};
+  --text: #{map-get($theme, text)};
+  --primary: #{map-get($theme, primary)};
+}
 
 @mixin flex-center {
     display: flex;

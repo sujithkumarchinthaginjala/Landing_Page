@@ -74,7 +74,7 @@
                 font-family: $primary-font;
                 font-size: $headline4-size;
                 font-weight: 600;
-                color: $primary;
+                color: var(--primary);
                 margin: 0;
 
                 @include respond-to(tablet){
@@ -139,7 +139,7 @@
         flex-direction: column;
         width: 100%;
         height: 620px;
-        background-color: $white;
+        background-color: var(--background);
         gap: 30px;
 
         @include respond-to(mobile){

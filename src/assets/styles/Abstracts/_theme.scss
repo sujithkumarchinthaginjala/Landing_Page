@@ -1,0 +1,14 @@
+@use 'variables' as *;
+
+$themes: (
+  light: (
+    background: #ffffff,
+    text: #111111,
+    primary: $primary,
+  ),
+  dark: (
+    background: #fff1f0,
+    text: #ffffff,
+    primary: #f2183c,
+  )
+);

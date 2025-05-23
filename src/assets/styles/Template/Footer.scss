@@ -193,7 +193,7 @@
                 }
 
                 h1{
-                    @include h($headline4-size, $white);
+                    @include h($headline4-size, var(--primary));
                     margin-bottom: 10px;
                 }
 
@@ -223,7 +223,7 @@
 
 
                 h1{
-                    @include h($headline4-size, $white);
+                    @include h($headline4-size, var(--primary));
                     margin-bottom: 10px;
                 }
 
