@@ -1,15 +1,15 @@
 [
     {
-        "image":"src/assets/icons/last1.png",
+        "image":"@/assets/icons/last1.png",
         "text":"Creating Streamlined Safeguarding Processes with OneRen"
     },
 
     {
-        "image":"src/assets/icons/last2.png",
+        "image":"@/assets/icons/last2.png",
         "text":"What are your safeguarding responsibilities and how can you manage them?"
     },
     {
-        "image":"src/assets/icons/last3.png",
+        "image":"@/assets/icons/last3.png",
         "text":"Revamping the Membership Model with Triathlon Australia"
     }
 
