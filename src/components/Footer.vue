@@ -1,9 +1,9 @@
 <script setup>
     import logo  from '../assets/icons/Logo.png';
-    import social_icon1 from '../assets/icons/social_icons/social_icon1.png';
-    import social_icon2 from '../assets/icons/social_icons/social_icon2.png';
-    import social_icon3 from '../assets/icons/social_icons/social_icon3.png';
-    import social_icon4 from '../assets/icons/social_icons/social_icon4.png';
+    import social_icon1 from '../assets/icons/social_icon1.png';
+    import social_icon2 from '../assets/icons/social_icon2.png';
+    import social_icon3 from '../assets/icons/social_icon3.png';
+    import social_icon4 from '../assets/icons/social_icon4.png';
 </script>
 
 <template>

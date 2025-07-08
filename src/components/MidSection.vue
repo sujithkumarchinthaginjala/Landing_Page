@@ -1,5 +1,10 @@
 <script setup>
     import data2 from '../data/data2.json';
+
+    function getImageUrl(filename) {
+        return new URL(`../assets/icons/${filename}`, import.meta.url).href
+    }
+
 </script>
 
 <template>
@@ -11,7 +16,7 @@
     </div>
     <div class="text-data">
         <div class="data" v-for="data in data2" :key="data.id">
-            <img :src="data.image" alt="">
+            <img :src="getImageUrl(data.image)" alt="">
             <div class="text-data1">
                 <h1>{{ data.count }}</h1>
                 <p>{{ data.title }}</p> 

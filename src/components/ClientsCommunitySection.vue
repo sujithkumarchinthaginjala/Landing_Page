@@ -1,12 +1,16 @@
 <script setup>
-    import logo2 from '../assets/icons/clients_logo/Logo(2).png';
-    import logo3 from '../assets/icons/clients_logo/Logo(3).png';
-    import logo4 from '../assets/icons/clients_logo/Logo(4).png';
-    import logo5 from '../assets/icons/clients_logo/Logo(5).png';
-    import logo6 from '../assets/icons/clients_logo/Logo(6).png';
-    import logo7 from '../assets/icons/clients_logo/Logo(7).png';
-    import logo8 from '../assets/icons/clients_logo/Logo(8).png';
+    import logo2 from '../assets/icons/Logo(2).png';
+    import logo3 from '../assets/icons/Logo(3).png';
+    import logo4 from '../assets/icons/Logo(4).png';
+    import logo5 from '../assets/icons/Logo(5).png';
+    import logo6 from '../assets/icons/Logo(6).png';
+    import logo7 from '../assets/icons/Logo(7).png';
+    import logo8 from '../assets/icons/Logo(8).png';
     import data1 from '../data/data1.json';
+
+    function getImageUrl(filename) {
+        return new URL(`../assets/icons/${filename}`, import.meta.url).href;
+    }
 </script>
 
 <template>
@@ -31,7 +35,7 @@
     </div>
     <div class="community_card">
         <div v-for="item in data1" :key="item.id" class="communitydata">
-            <img :src="item.image" alt="">
+            <img :src="getImageUrl(item.image)" alt="">
             <h1>{{ item.title }}</h1>
             <p>{{ item.text }}</p>
         </div>

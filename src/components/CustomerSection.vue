@@ -1,12 +1,17 @@
 <script setup>
     import customericon from '../assets/icons/Customer_icon.png';
-    import logo2 from '../assets/icons/clients_logo/Logo(2).png';
-    import logo3 from '../assets/icons/clients_logo/Logo(3).png';
-    import logo4 from '../assets/icons/clients_logo/Logo(4).png';
-    import logo5 from '../assets/icons/clients_logo/Logo(5).png';
-    import logo6 from '../assets/icons/clients_logo/Logo(6).png';
-    import logo7 from '../assets/icons/clients_logo/Logo(7).png';
+    import logo2 from '../assets/icons/Logo(2).png';
+    import logo3 from '../assets/icons/Logo(3).png';
+    import logo4 from '../assets/icons/Logo(4).png';
+    import logo5 from '../assets/icons/Logo(5).png';
+    import logo6 from '../assets/icons/Logo(6).png';
+    import logo7 from '../assets/icons/Logo(7).png';
     import data3 from '../data/data3.json';
+
+    function getImageUrl(filename) {
+        return new URL(`../assets/icons/${filename}`, import.meta.url).href
+    }
+
 </script>
 
 <template>
@@ -34,7 +39,7 @@
         </div>
         <div class="cards_container">
             <div class="cards" v-for="item in data3" :key="item.id">
-                <img :src="item.image" alt="">
+                <img :src="getImageUrl(item.image)" alt="">
                 <div class="mini-card">
                     <p>{{ item.text }}</p>
                     <button class="no_bg-button">Meet all customers<font-awesome-icon :icon="['fas', 'arrow-right']" style="color: " /></button>
